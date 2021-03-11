@@ -12,6 +12,7 @@ class HumanPlayer {
     this.rl.question("Choose a coordinate to hit. (e.g. 3,1) \n> ", (answer) => {
       const [row, col] = answer.split(",");
       processMove([row, col]);
+      attack([row, col]);
     });
   }
   getMove() {
@@ -29,5 +30,7 @@ class HumanPlayer {
     this.rl.close();
   }
 }
+
+
 
 module.exports = HumanPlayer;
